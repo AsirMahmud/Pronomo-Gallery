@@ -4,7 +4,7 @@
 
 <template>
     <div class="flex gap-8 scroll-m-10">
-        <form class="w-[50%] shadow-lg p-8 flex flex-col gap-8 bg-white">
+        <form class="lg:w-[50%] w-full shadow-lg p-8 flex flex-col gap-8 bg-white">
             <div class="flex flex-col gap-2">
                 <h2 class="font-bold text-4xl">Upload</h2>
                 <p>Questions, bugs, feedback — we’re here for you</p>
@@ -34,11 +34,11 @@
                 </div>
 
             </div>
-            <Button type="submit" class="w-full bg-black text-center text-white rounded" label="Submit"></Button>
+            <button type="submit" class="w-full bg-black text-center text-white rounded p-2">Submit</button>
 
 
         </form>
-        <form class="w-[50%] shadow-lg p-8 flex flex-col gap-8 bg-white">
+        <form class="lg:w-[50%] w-full shadow-lg p-8 flex flex-col gap-8 bg-white">
             <div class="flex flex-col gap-2">
                 <h2 class="font-bold text-4xl">Contact Us</h2>
                 <p>Questions, bugs, feedback — we’re here for you</p>
@@ -63,8 +63,7 @@
 
                 </div>
 
-            </div>
-            <Button type="submit" class="w-full bg-black text-white rounded" label="Submit"></Button>
+            </div> <button type="submit" class="w-full bg-black text-center text-white rounded p-2">Submit</button>
 
 
         </form>
