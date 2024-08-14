@@ -13,21 +13,22 @@ const value1 = ref(null);
         </section>
         <section class="rounded-full bg-white px-8 p-1 border flex gap-4">
             <NuxtLink to="/">
-                <Button size="small"
-                    :class="route.path === '/' ? 'bg-black text-white rounded-full' : 'bg-white text-black border-none'">Home</Button>
+                <button
+                    :class="route.path === '/' ? 'bg-black text-white rounded-full p-2 px-4' : 'bg-white text-blacborder-none p-2 px-4'">Home</button>
+
             </NuxtLink>
             <NuxtLink to="/image">
-                <Button size="small"
-                    :class="route.path === '/image' ? 'bg-black text-white rounded-full' : 'bg-white text-black border-none'">Gallery</Button>
+                <button
+                    :class="route.path === '/image' ? 'bg-black text-white rounded-full p-2 px-4' : 'bg-white text-blacborder-none p-2 px-4'">Gallery</button>
             </NuxtLink>
             <NuxtLink to="/#contact">
-                <Button size="small"
-                    :class="route.hash === '#contact' ? 'bg-black text-white rounded-full' : 'bg-white text-black border-none'">Contact</Button>
+                <button
+                    :class="route.path === '/#contact' ? 'bg-black text-white rounded-full p-2 px-4' : 'bg-white text-blacborder-none p-2 px-4'">Contact</button>
             </NuxtLink>
             <NuxtLink to="/admin">
-                <Button size="small"
-                    :class="route.hash === '#contact' ? 'bg-black text-white rounded-full' : 'bg-white text-black border-none'">Admin
-                    Panel</Button>
+                <button
+                    :class="route.path === '/admin' ? 'bg-black text-white rounded-full p-2 px-4' : 'bg-white text-blacborder-none p-2 px-4'">Admin
+                    Panel</button>
             </NuxtLink>
         </section>
         <section>
