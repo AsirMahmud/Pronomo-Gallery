@@ -3,9 +3,9 @@
 </script>
 
 <template>
-    <div class="flex gap-16 flex-col">
+    <div class="flex bg-gradient-to-r from-[#FDF9F8] to-[#F4F7FE] gap-16 flex-col p-8">
         <div class="w-full text-center flex flex-col gap-4">
-            <h1>Image Gallery</h1>
+            <h1>Video Gallery</h1>
             <p class="w-[40%] mx-auto">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nam maxime nostrum
                 cupiditate
                 velit optio

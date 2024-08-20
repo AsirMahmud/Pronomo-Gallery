@@ -3,7 +3,7 @@
 </script>
 
 <template>
-    <div class="mt-10">
+    <div class="mt-20 ">
         <h1 class="">
             BEGIN AN EXPLOATION THROUGH AGALLERY SHOWCASING ARTISAN CREATIVITY.
         </h1>

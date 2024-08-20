@@ -1,3 +1,39 @@
+<script setup>
+import { ref, onMounted } from "vue";
+import { PhotoService } from './photo.js';
+
+onMounted(() => {
+    PhotoService.getImages().then((data) => (images.value = data));
+});
+
+const images = ref([]);
+const activeIndex = ref(0);
+const responsiveOptions = ref([
+    {
+        breakpoint: '1024px',
+        numVisible: 3
+    },
+    {
+        breakpoint: '768px',
+        numVisible: 3
+    },
+    {
+        breakpoint: '560px',
+        numVisible: 1
+    }
+]);
+const hoverId = ref('')
+const showText = (id) => {
+
+
+}
+const displayCustom = ref(false);
+
+const imageClick = (index) => {
+    activeIndex.value = index;
+    displayCustom.value = true;
+};
+</script>
 <template>
     <div class="flex flex-col gap-8 mt-10">
         <div class="w-full text-center flex flex-col gap-4">
@@ -35,8 +71,10 @@
             </Galleria>
 
             <div v-if="images" class="grid grid-cols-3 gap-8 w-full mt-8">
-                <div v-for="(image, index) of images" :key="index" class="w-full relative rounded-lg">
-                    <div class=" absolute bottom-0 left-0 p-8 w-[60%]">
+                <div @mouseover="() => hoverId = image.alt" @mouseleave="() => hoverId = ''"
+                    v-for="(image, index) of images" :key="index" class="w-full relative rounded-lg">
+                    <div class=" transition-transform ease-in  absolute bottom-0 left-0 p-8 w-[60%]"
+                        v-if="hoverId === image.alt">
                         <h3 class=" text-2xl  text-white">Alfredo dfsd</h3>
                         <span class=" text-white">Lets go to there!</span>
 
@@ -62,37 +100,6 @@
 
 </template>
 
-<script setup>
-import { ref, onMounted } from "vue";
-import { PhotoService } from './photo.js';
-
-onMounted(() => {
-    PhotoService.getImages().then((data) => (images.value = data));
-});
-
-const images = ref([]);
-const activeIndex = ref(0);
-const responsiveOptions = ref([
-    {
-        breakpoint: '1024px',
-        numVisible: 3
-    },
-    {
-        breakpoint: '768px',
-        numVisible: 3
-    },
-    {
-        breakpoint: '560px',
-        numVisible: 1
-    }
-]);
-const displayCustom = ref(false);
-
-const imageClick = (index) => {
-    activeIndex.value = index;
-    displayCustom.value = true;
-};
-</script>
 
 <style scoped>
 /* Optional: Customize the spacing or appearance further */

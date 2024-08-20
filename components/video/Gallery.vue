@@ -22,9 +22,12 @@
                 </template>
             </Galleria>
 
+
             <div v-if="videos" class="grid grid-cols-3 gap-8 w-full mt-8">
-                <div v-for="(video, index) of videos" :key="index" class="w-full relative rounded-lg">
-                    <div class=" absolute bottom-0 left-0 p-8 w-[60%]">
+                <div @mouseover="() => hoverId = video.alt" @mouseleave="() => hoverId = ''"
+                    v-for="(video, index) of videos" :key="index" class="w-full relative rounded-lg">
+                    <div class=" transition-transform ease-in  absolute bottom-0 left-0 p-8 w-[60%]"
+                        v-if="hoverId === video.alt">
                         <h3 class=" text-2xl  text-white">Alfredo dfsd</h3>
                         <span class=" text-white">Lets go to there!</span>
 
@@ -78,6 +81,7 @@ const videoClick = (index) => {
     activeIndex.value = index;
     displayCustom.value = true;
 };
+const hoverId = ref('')
 </script>
 
 <style scoped>

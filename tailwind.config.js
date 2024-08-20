@@ -8,7 +8,7 @@ export default {
       },
     },
   },
- theme: {
+  theme: {
     extend: {
       backgroundImage: {
         "gradient-four-colors":

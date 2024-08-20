@@ -1,9 +1,24 @@
 <script setup>
 import { useRoute } from 'vue-router';
-import { ref } from 'vue';
+
 
 const route = useRoute();
 const value1 = ref(null);
+import { ref } from 'vue';
+
+const isOpen = ref(false);
+
+const toggleDropdown = () => {
+    isOpen.value = !isOpen.value;
+};
+const isSearchable = ref(false)
+
+const menuItems = ref([
+    { name: 'Image', link: '/image' },
+    { name: 'Video', link: '/video' },
+
+
+]);
 </script>
 
 <template>
@@ -17,26 +32,42 @@ const value1 = ref(null);
                     :class="route.path === '/' ? 'bg-black text-white rounded-full p-2 px-4' : 'bg-white text-blacborder-none p-2 px-4'">Home</button>
 
             </NuxtLink>
-            <NuxtLink to="/image">
+
+            <div class="relative" @click="toggleDropdown">
                 <button
-                    :class="route.path === '/image' ? 'bg-black text-white rounded-full p-2 px-4' : 'bg-white text-blacborder-none p-2 px-4'">Gallery</button>
-            </NuxtLink>
+                    :class="route.path === '/image' || route.path === '/video' ? 'bg-black text-white rounded-full p-2 px-4' : 'bg-white text-blacborder-none p-2 px-4'">Gallery</button>
+
+                <div v-if="isOpen" class="absolute left-10 mt-2 w-48 bg-white border rounded-lg shadow-lg">
+                    <ul>
+                        <li v-for="item in menuItems" :key="item.name" class="hover:bg-gray-100">
+                            <NuxtLink :to="item.link" class="block px-4 py-2 text-black">
+                                {{ item.name }}
+                            </NuxtLink>
+                        </li>
+                    </ul>
+                </div>
+            </div>
             <NuxtLink to="/#contact">
                 <button
                     :class="route.path === '/#contact' ? 'bg-black text-white rounded-full p-2 px-4' : 'bg-white text-blacborder-none p-2 px-4'">Contact</button>
             </NuxtLink>
-            <NuxtLink to="/admin">
+            <NuxtLink to="/blog">
                 <button
-                    :class="route.path === '/admin' ? 'bg-black text-white rounded-full p-2 px-4' : 'bg-white text-blacborder-none p-2 px-4'">Admin
-                    Panel</button>
+                    :class="route.path === '/blog' ? 'bg-black text-white rounded-full p-2 px-4' : 'bg-white text-blacborder-none p-2 px-4'">Blog</button>
             </NuxtLink>
+
+
         </section>
-        <section>
-            <svg width="20" height="29" viewBox="0 0 28 29" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <section :class="['rounded-full p-2 flex   items-center', isSearchable && 'border']">
+            <input v-if="isSearchable"
+                class="w-full text-black border-none  hover:border-none focus:outline-none focus:ring-0">
+            <svg @click="() => isSearchable = !isSearchable" width="20" height="29" viewBox="0 0 28 29" fill="none"
+                class=" cursor-pointer" xmlns="http://www.w3.org/2000/svg">
                 <path
                     d="M26.6283 28.1543L16.1917 17.7176C15.3583 18.4276 14.4 18.9771 13.3167 19.3659C12.2333 19.7548 11.1444 19.9493 10.05 19.9493C7.38111 19.9493 5.12222 19.0254 3.27333 17.1776C1.42444 15.3287 0.5 13.0704 0.5 10.4026C0.5 7.73484 1.42333 5.47539 3.27 3.62428C5.11778 1.77206 7.37556 0.845947 10.0433 0.845947C12.7122 0.845947 14.9722 1.77039 16.8233 3.61928C18.6744 5.46817 19.6 7.72761 19.6 10.3976C19.6 11.5554 19.395 12.6759 18.985 13.7593C18.5739 14.8426 18.035 15.7693 17.3683 16.5393L27.805 26.9743L26.6283 28.1543ZM10.05 18.2809C12.2611 18.2809 14.1283 17.5198 15.6517 15.9976C17.1739 14.4754 17.935 12.6082 17.935 10.3959C17.935 8.18483 17.1739 6.31817 15.6517 4.79595C14.1294 3.27372 12.2628 2.51261 10.0517 2.51261C7.84055 2.51261 5.97333 3.27372 4.45 4.79595C2.92778 6.31817 2.16667 8.18483 2.16667 10.3959C2.16667 12.6071 2.92778 14.4737 4.45 15.9959C5.97222 17.5182 7.83889 18.2809 10.05 18.2809Z"
                     fill="black" />
             </svg>
+
         </section>
     </nav>
 </template>

@@ -43,13 +43,14 @@ const images = [
     /* Adjust the width as needed */
     height: 60vh;
     /* Adjust the height as needed */
-    margin: auto;
-    /* Center the swiper horizontally */
+    margin:
+        -mt-20
+        /* Center the swiper horizontally */
 }
 
 html,
 body {
-    background: #eee;
+    background: #5a2121;
     font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
     font-size: 14px;
     color: #000;
@@ -62,6 +63,7 @@ body {
     height: 100%;
     padding-top: 50px;
     padding-bottom: 50px;
+
 }
 
 .swiper-slide {
