@@ -38,9 +38,8 @@
             </div>
         </div>
         <div class="w-full ">
-            <NuxtImg
-                src="http://t0.gstatic.com/licensed-image?q=tbn:ANd9GcSaa4PbteNbRoyr36GMCNsmqsGJyCZ9ktJ0UulsBEzwcOxZDxciW7iE5mtWzo61ZWih54NEB3GxKleuCSvoso8"
-                alt="Image" class="w-full max-h-[500px] h-auto object-cover rounded-xl"></NuxtImg>
+            <img src="http://t0.gstatic.com/licensed-image?q=tbn:ANd9GcSaa4PbteNbRoyr36GMCNsmqsGJyCZ9ktJ0UulsBEzwcOxZDxciW7iE5mtWzo61ZWih54NEB3GxKleuCSvoso8"
+                alt="Image" class="w-full max-h-[500px] h-auto object-cover rounded-xl"></img>
 
         </div>
         <p class="px-4">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facilis eligendi alias minima et
@@ -62,9 +61,8 @@
 
         <div class=" flex flex-col gap-8" v-for="i in 5">
             <div class="w-full ">
-                <NuxtImg
-                    src="http://t0.gstatic.com/licensed-image?q=tbn:ANd9GcSaa4PbteNbRoyr36GMCNsmqsGJyCZ9ktJ0UulsBEzwcOxZDxciW7iE5mtWzo61ZWih54NEB3GxKleuCSvoso8"
-                    alt="Image" class="w-full max-h-[500px] h-auto object-cover rounded-xl"></NuxtImg>
+                <img src="http://t0.gstatic.com/licensed-image?q=tbn:ANd9GcSaa4PbteNbRoyr36GMCNsmqsGJyCZ9ktJ0UulsBEzwcOxZDxciW7iE5mtWzo61ZWih54NEB3GxKleuCSvoso8"
+                    alt="Image" class="w-full max-h-[500px] h-auto object-cover rounded-xl"></img>
 
             </div>
             <h5 class=" w-[60%] text-start  text-2xl">Lorem ipsum dolor sit amet consectetur adipisicing elit.
