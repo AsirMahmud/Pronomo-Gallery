@@ -3,7 +3,7 @@
 </script>
 
 <template>
-    <div class="flex flex-col gap-32">
+    <div class="flex flex-col ">
         <HomeHeroHeader></HomeHeroHeader>
         <HomeHeroSlider></HomeHeroSlider>
         <HomeAritcles></HomeAritcles>

@@ -14,8 +14,10 @@
 
         </div>
         <div class="grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-4 place-items-center">
-            <HomeCard v-for="i in 9" key="i"></HomeCard>
+            <NuxtLink v-for="i in 9" to="/blog">
+                <HomeCard key="i"></HomeCard>
 
+            </NuxtLink>
         </div>
     </div>
 </template>

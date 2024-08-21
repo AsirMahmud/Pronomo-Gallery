@@ -44,7 +44,7 @@ const images = [
     height: 60vh;
     /* Adjust the height as needed */
     margin:
-        -mt-20
+        -m0
         /* Center the swiper horizontally */
 }
 

@@ -51,10 +51,6 @@ const menuItems = ref([
                 <button
                     :class="route.path === '/#contact' ? 'bg-black text-white rounded-full p-2 px-4' : 'bg-white text-blacborder-none p-2 px-4'">Contact</button>
             </NuxtLink>
-            <NuxtLink to="/blog">
-                <button
-                    :class="route.path === '/blog' ? 'bg-black text-white rounded-full p-2 px-4' : 'bg-white text-blacborder-none p-2 px-4'">Blog</button>
-            </NuxtLink>
 
 
         </section>
