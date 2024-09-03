@@ -56,7 +56,7 @@ const menuItems = ref([
         </section>
         <section :class="['rounded-full p-2 flex   items-center', isSearchable && 'border']">
             <input v-if="isSearchable"
-                class="w-full text-black border-none  hover:border-none focus:outline-none focus:ring-0">
+                class="w-full text-black border-none  hover:border-none focus:outline-none bg-[#FDF9F8] focus:ring-0">
             <svg @click="() => isSearchable = !isSearchable" width="20" height="29" viewBox="0 0 28 29" fill="none"
                 class=" cursor-pointer" xmlns="http://www.w3.org/2000/svg">
                 <path
