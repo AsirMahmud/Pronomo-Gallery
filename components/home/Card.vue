@@ -1,7 +1,8 @@
 <template>
     <div class="max-w-[364px] w-full h-[450px] bg-white rounded-lg  overflow-hidden">
         <!-- Image -->
-        <img src="https://via.placeholder.com/364x240" alt="Card image" class="w-full h-[240px] object-cover" />
+        <img src="https://images.pexels.com/photos/417074/pexels-photo-417074.jpeg" alt="Card image"
+            class="w-full h-[240px] object-cover" />
 
         <!-- Content -->
         <div class="p-4">

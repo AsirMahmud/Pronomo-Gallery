@@ -46,6 +46,7 @@ const images = [
     margin:
         -m0
         /* Center the swiper horizontally */
+
 }
 
 html,
@@ -63,7 +64,7 @@ body {
     height: 100%;
     padding-top: 50px;
     padding-bottom: 50px;
-
+    @apply bg-gradient-to-b from-[#FDF9F8] to-[#F4F7FE]
 }
 
 .swiper-slide {
