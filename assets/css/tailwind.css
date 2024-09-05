@@ -26,9 +26,9 @@ textarea {
   @apply border-2  rounded placeholder:text-[#6D7E8A] px-4;
 }
 input {
-  @apply h-9;
+  @apply h-16;
 }
 
 textarea {
-  @apply h-28;
+  @apply h-48;
 }

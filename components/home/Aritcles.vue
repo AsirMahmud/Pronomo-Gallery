@@ -1,4 +1,12 @@
 <script setup>
+import { PhotoService } from '../image/photo';
+
+
+const images = ref([]);
+
+onMounted(() => {
+    PhotoService.getImages().then((data) => (images.value = data));
+});
 
 </script>
 
@@ -14,9 +22,9 @@
 
 
             </div>
-            <div class="grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-4 place-items-center">
+            <div class="grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-16 place-items-center">
                 <NuxtLink v-for="i in 9" to="/blog">
-                    <HomeCard key="i"></HomeCard>
+                    <HomeCard key="i" :img="images[i].itemImageSrc"></HomeCard>
 
                 </NuxtLink>
             </div>

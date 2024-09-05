@@ -1,8 +1,13 @@
+<script setup>
+defineProps({
+    img: String
+})
+</script>
+
 <template>
     <div class="max-w-[364px] w-full h-[450px] bg-white rounded-lg  overflow-hidden">
         <!-- Image -->
-        <img src="https://images.pexels.com/photos/417074/pexels-photo-417074.jpeg" alt="Card image"
-            class="w-full h-[240px] object-cover" />
+        <img :src="img" alt="Card image" class="w-full h-[240px] object-cover" />
 
         <!-- Content -->
         <div class="p-4">
@@ -36,7 +41,8 @@
             </h2>
             <p class="text-gray-600 text-sm">
                 Lorem ipsum dolor sit amet, consectetur sadipscing elitr, sed diam
-                nonumy eirmod tempor.
+                nonumy eirmod Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque vitae nisi ipsum
+                debitis neque quis quidem in nam culpa.
             </p>
         </div>
     </div>
